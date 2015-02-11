@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<link rel="stylesheet" href="form1.css">
+</head>
+<body>
+<form>
+	<!-- <p style="height:30px; width:660px; background-color:blue; padding:none;">Add Risk</p> -->
+	<label>Subject:</label>
+	<input type="text" name="subject" style="width:430px;"><br><br>
+	
+	<label>Customer:</label>
+	<input type="search"><br><br>
+	
+	<label>Owner:</label>
+	<input list="Owner" placeholder="Type to search"><br><br>
+	<datalist id="Owner">
+    	<option value="Owner1">
+		<option value="Owner2">
+   		<option value="ABC">
+    	<option value="Naresh">
+    	<option value="D">
+		<option value="Gainsight">
+     </datalist>
+	
+	<label>Reason:</label>
+	<select>
+    	<option value="value1">Categiry1</option> 
+       	<option value="value2">Categiry2</option>
+    	<option value="value3">Categiry3</option>
+    	<option value="value4">Categiry4</option>
+    	<option value="value3"  selected>Others</option>
+   	</select> <br><br>
+	
+	<label>Due Date:</label>
+	<input type="date" style="width:125px;"> <br><br>
+	
+	<label>Comments:</label>
+	<input type="text area" style="height:60px;width:430px;"> <br><br>
+	
+	<button type="button" id="bt1" >Save</button>
+	<button type="button" id="bt2" >Cancel</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="myFunction()">click</button>
+<p id="demo"></p>
+<script>
+var a=[];
+var b=[];
+//var ab=[];
+//var bb=[];
+function myFunction() {
+// var ab=prompt("enter some values","enter values seperated with comma");
+// console.log(typeof(ab));
+// bb=ab;
+// alert(typeof(Number(bb)));
+// console.log(bb);
+    var arr = prompt("enter some values","enter values seperated with comma");
+    //[1,2,3,4,5,6,7,8];
+    //alert(typeof(arr));
+    for (var i = 0; i < arr.length; i++) {
+        if ((arr[i]%2)==0) {
+        	console.log(typeof(2));
+        a.push(arr[i]);
+        }
+        else
+        {
+		b.push(arr[i]);
+	    }    
+	}
+document.writeln("Even numbers are :"+a+"<br>");
+document.writeln("Odd numbers are :"+b);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+	img{
+		border:5px solid lightgrey;
+		width: 90%;
+	}
+	p,h1,h2 {
+		font-family: "Arial";
+		text-align: left;
+		padding: 0px 15px 0px 20px;
+	}
+	p{
+		color: #505050;
+	}
+	.menu-row{
+		height:40px;
+		border-bottom:5px solid lightgrey;
+		margin-bottom: 15px;
+	}
+	.sub-container{	
+		width:85%;
+		margin: 0px auto;
+		/*clear:both;*/
+	}
+	.banner-row:after {
+		display: block;
+		content: "";
+		clear: both;
+		margin-bottom: 15px;
+	}
+	.banner-image{
+		float:left;
+		width:65%;
+		padding-left: 10px;
+	}
+	.banner-text{
+		float:left;
+		width:34%;
+	}
+	.gallery-row:after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+	.gallery-row .gallery-col{
+		float:left;
+		width:33%;
+	}
+	.gallery-row .gallery-col .gallery-thumb{
+		border: 1px solid lightgrey;
+		border-left: 0px;
+		border-bottom: 0px;
+		text-align: center;
+		height: 450px;
+		padding-top: 15px;
+	}
+	.gallery-row .gallery-col:last-child .gallery-thumb{
+		border-right: 0px;
+	}

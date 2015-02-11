@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+var a=prompt("enter a number","");
+function factorial(n)
+{ 
+    if(n===0){ return 1;
+        }
+    else{
+   		var d = n * factorial(n-1);
+   		return d;
+    }
+}
+document.write(factorial(a));
+//console.log(d);
+</script>
+</head>
+<body>
+<!-- 
+<input type="button" onclick="factorial(a)" value="Click here"/>
+ -->
+</body>
+</html>

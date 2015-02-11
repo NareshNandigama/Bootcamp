@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CtA Task</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	
+	<style type="text/css">
+	#row1{
+		height: 100px;
+	}
+	table {
+		/*background-color: red;
+		width:600px;*/
+		/*text-align: center;
+*/	}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row" id="row1">
+	<div class="col-md-4">
+		<label>Priority: </label>
+		<select id="prioritySelect" onchange="changepriority(this)"></select>
+		</div>
+		<div class="col-md-4">
+		<label >Owner: </label>
+		<select id="ownerSelect" onchange="changeowner(this)"></select>
+		</div>
+		<div class="col-md-4">
+		<label>Group By: </label>
+		<select>
+		  <option>Priority</option>
+		  <option>Stage</option>
+		  <option>Name</option>
+		</select>
+		</div>
+	
+	</div>
+<div class="row">
+<table class="table table-bordered" id="table1">
+	<tr>
+		<th colspan="2">CTA Count:</th>
+		<th colspan="4" id="rowcount"></th>
+	</tr>
+
+    <tr>
+		<th>Name</th>
+		<th>Account Name</th>
+		<th>ASV</th>
+		<th>Users</th>
+		<th>Type</th>
+		<th>Age</th>
+	</tr>
+	
+</table>
+</div>
+</div>
+<script src="abc.js">
+	//myFunction();
+</script>
+</body>
+</html>

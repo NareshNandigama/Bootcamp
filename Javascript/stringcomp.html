@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<button onclick="myFunction()">click</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var str = "abcdbcf";
+    var obj={};
+    for (var i = 0; i < str.length; i++) {
+        var cnt=0;
+    	for (var j = 0; j < str.length; j++) {    	
+    	if (str[i]==str[j]) {
+            cnt++;
+            if (cnt>1) {
+            obj[str[i]]=cnt;
+    	}}
+    }
+    }
+   console.log(obj);
+   document.write(JSON.stringify(obj));
+  //  var res = str.charAt(2);
+    
+}
+</script>
+
+</body>
+</html>
