@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Mouse hover<br>mouse click<br>mouse out</p>
+
+<button id="bt1">Try it</button>
+<p id="demo1"></p>
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("bt1");
+x.addEventListener("mouseover", fn1);
+x.addEventListener("click", fn2);
+x.addEventListener("mouseout", fn3);
+
+
+function fn1() {
+    document.getElementById("demo").innerHTML = "Moused over!<br>";
+}
+
+function fn2() {
+    document.getElementById("demo").innerHTML += "Clicked!<br>";
+}
+
+function fn3() {
+    document.getElementById("demo").innerHTML += "Moused out!<br>";
+}
+
+</script>
+
+</body>
+</html>

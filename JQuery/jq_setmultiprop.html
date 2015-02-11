@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#w3s").attr({
+            "href" : "http://www.gainsight.com",
+            "title" : "CSM"
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<p><a href="http://www.google.com" title="google org" id="w3s">www.google.com</a></p>
+
+<button>Change href and title</button>
+
+<p>Mouse over the link to see title attribute is set and the href attribute has changed.</p>
+
+</body>
+</html>

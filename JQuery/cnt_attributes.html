@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button#b1").click(function(){
+        alert("Value: " + $("#test1").val());
+    });
+     $("button#b2").click(function(){
+        alert($("#gs").attr("href"));
+    });
+     $("#b3").click(function(){
+        alert("Text: " + $("#test").text());
+    });
+    $("#b4").click(function(){
+        alert("HTML: " + $("#test").html());
+    });
+});
+</script>
+</head>
+<body>
+
+<p id="test">Name: <input type="text" id="test1" value="Hello"></p>
+
+<button id="b1">Show Value</button>
+<p><a href="http://www.gainsight.com" id="gs">link..</a></p>
+
+<button id="b2">Show link</button>
+<button id="b3">Show Text</button>
+<button id="b4">Show HTML</button>
+</body>
+</html>
