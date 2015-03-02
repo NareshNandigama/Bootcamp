@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<script type="text/javascript" src = "http://code.jquery.com/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	.tb
+	{
+		/*padding: 5 auto;*/
+		height: 360px;
+		width: 300px;
+		font-weight: bold;
+		text-align: center;
+	}
+	.abc
+	{
+		margin: 100px 100px 100px 500px;
+	}
+	</style>
+
+</head>
+<body>
+<div class="abc">
+	<table class="tb table-bordered">
+		<tr>
+		<th colspan="5" style="text-align:center">CALCULATOR</th>
+		</tr>
+		<tr>
+			<td id="op" colspan="5" height="80">
+			</td>
+		</tr>
+		
+		<tr>
+			<td id="backslash"><--</td>
+			<td id="CE">CE </td>
+			<td id="C">C&nbsp&nbsp</td>
+			<td id="plusrminus">+/-</td>
+			<td id="sqrt">sqrt</td>
+		</tr>
+		<tr>
+			<td id="n7">7</td>
+			<td id="n8">8</td>
+			<td id="n9">9</td>
+			<td id="devide">/</td>
+			<td id="percentile">%</td>
+		</tr>
+		<tr>
+			<td id="n4">4</td>
+			<td id="n5">5</td>
+			<td id="n6">6</td>
+			<td id="multiply">*</td>
+			<td  id="1x">1/x</td>
+		</tr>
+		<tr>
+			<td id="n1">1</td>
+			<td id="n2">2</td>
+			<td id="n3">3</td>
+			<td id="minus">-</td>
+			<td rowspan="2" id="eq">=</td>
+		</tr>
+		<tr>
+			<td colspan="2" id="n0">0</td>
+			<td id="dot">.</td>
+			<td id="plus">+</td>
+		</tr>
+	</table>
+</div>
+<script type="text/javascript">
+	$("#n1").click(function(){$("#op").append("1");});
+	$("#n2").click(function(){$("#op").append("2");});
+	$("#n3").click(function(){$("#op").append("3");});
+	$("#n4").click(function(){$("#op").append("4");});
+	$("#n5").click(function(){$("#op").append("5");});
+	$("#n6").click(function(){$("#op").append("6");});
+	$("#n7").click(function(){$("#op").append("7");});
+	$("#n8").click(function(){$("#op").append("8");});
+	$("#n9").click(function(){$("#op").append("9");});
+	$("#n0").click(function(){$("#op").append("0");});
+
+	$("#plus").click(function(){$("#op").append("+");});
+	$("#minus").click(function(){$("#op").append("-");});
+	$("#multiply").click(function(){$("#op").append("*");});
+	$("#devide").click(function(){$("#op").append("/");});
+	$("#dot").click(function(){$("#op").append(".");});
+	
+	$("#1x").click(function(){
+	var str=$("#op").text();
+		$("#op").empty();
+		$("#op").append(eval(1/str));
+	});
+	$("#percentile").click(function(){$("#op").append("%");});
+	$("#eq").click(function(){
+		var str=$("#op").text();
+		$("#op").empty();
+		$("#op").append(eval(str));
+	});
+	$("#sqrt").click(function(){
+		$("#op").text(
+         function(index,value){
+			var a=value.split(/[*+\/-]/);
+			var b=a[a.length-1];
+	        if(a.length==2) 
+			{   
+				if(value[0]=='-')
+				{	
+				    value="Invalid input";
+				    return value;
+				}
+			}
+				if($.inArray(value[value.length-b.length-2]+value[value.length-b.length-1], ['--', '+-', '*-', '/-']) >= 0)
+					value=value.substring(0,value.length-b.length-1)+"Invalid input";				
+				else value=value.substring(0,value.length-b.length)+Math.sqrt(b);			
+			        return(value);
+	}) 
+	});
+	$("#C").click(function(){
+		$("#op").empty();
+	});
+	$("#plusrminus").click(function(){
+		var str=$("#op").text();
+		$("#op").empty();
+		$("#op").append(eval(-str));
+	});
+	$("#backslash").click(function(){
+		$("#op").text(
+   		 function(index,value){
+        return value.substr(0,value.length-1);
+    })
+	});
+	$("#CE").click(function(){
+		$("#op").text(
+    function(index,value){
+			var a=value.split(/[*+\/-]/);
+			var b=a[a.length-1];
+			value=value.substring(0,value.length-b.length);			
+			return(value);
+	})
+});
+	
+</script>
+</body>
+</html>
